@@ -11,7 +11,6 @@ import {
   Settings,
   ChevronLeft,
   ChevronRight,
-  Calendar,
   FileSearch,
   Filter,
   Search,
@@ -20,8 +19,6 @@ import {
   Plus,
   X,
   Banknote,
-  Clock,
-  CheckCircle2,
   XCircle,
   AlertCircle,
   ChevronDown,
@@ -190,8 +187,8 @@ const InvoiceDetailsModal: React.FC<{
             <div>
               <h3 className="font-medium text-lg mb-2">Dates</h3>
               <div className="space-y-2">
-                <p><span className="font-medium">Date d'émission:</span> {new Date(invoice.issueDate).toLocaleDateString()}</p>
-                <p><span className="font-medium">Date d'échéance:</span> {new Date(invoice.dueDate).toLocaleDateString()}</p>
+                <p><span className="font-medium">Date d&apos;émission:</span> {new Date(invoice.issueDate).toLocaleDateString()}</p>
+                <p><span className="font-medium">Date d&apos;échéance:</span> {new Date(invoice.dueDate).toLocaleDateString()}</p>
                 {invoice.paymentDate && (
                   <p><span className="font-medium">Date de paiement:</span> {new Date(invoice.paymentDate).toLocaleDateString()}</p>
                 )}
@@ -747,7 +744,7 @@ const getDateValue = (item: any, field: string): number => {
                 {filteredInvoices.length > 0 ? (
                   filteredInvoices.map(invoice => {
                     const isOverdue = invoice.status === 'sent' && new Date(invoice.dueDate) < new Date();
-                    const currentStatus = isOverdue ? 'overdue' : invoice.status;
+                     isOverdue ? 'overdue' : invoice.status;
 
                     return (
                       <tr 

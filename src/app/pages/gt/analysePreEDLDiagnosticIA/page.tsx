@@ -2,10 +2,10 @@
 
 import React, { useState } from 'react';
 import { 
-  ClipboardCheck, Home, User, FileText, AlertTriangle, 
-  Check, ChevronDown, ChevronUp, Zap, Droplet, 
-  Flame, Wrench, Hammer, ClipboardList, Printer,
-  Download, Share2, Mail, X, CircleAlert, Clock,
+  ClipboardCheck,  FileText, AlertTriangle, 
+  Check, ChevronDown, ChevronUp, Zap,  
+  Flame,  Hammer, ClipboardList, Printer,
+  Download,  CircleAlert, 
   HardHat, Thermometer, ShieldAlert, Battery
 } from 'lucide-react';
 import Link from 'next/link';
@@ -195,7 +195,7 @@ export default function AnalyseDiagnosticIA() {
   const poorConditionElements = preEDLData.rooms.flatMap(room => room.elements).filter(el => el.condition === 'poor').length;
   const damagedConditionElements = preEDLData.rooms.flatMap(room => room.elements).filter(el => el.condition === 'damaged').length;
 
-  const automaticDiagnostics = diagnostics.filter(d => d.required);
+  
   const approvedDiagnostics = diagnostics.filter(d => d.approved).length;
 
   return (
@@ -251,7 +251,7 @@ export default function AnalyseDiagnosticIA() {
           >
             <h2 className="text-xl font-semibold flex items-center">
               <FileText className="h-5 w-5 mr-2" />
-              Synthèse de l'analyse
+              Synthèse de l&apos;analyse
             </h2>
             {expandedSections.summary ? <ChevronUp className="h-5 w-5" /> : <ChevronDown className="h-5 w-5" />}
           </button>
@@ -313,7 +313,7 @@ export default function AnalyseDiagnosticIA() {
           >
             <h2 className="text-xl font-semibold flex items-center">
               <HardHat className="h-5 w-5 mr-2" />
-              Diagnostics proposés par l'IA
+              Diagnostics proposés par l&apos;IA
             </h2>
             {expandedSections.diagnostics ? <ChevronUp className="h-5 w-5" /> : <ChevronDown className="h-5 w-5" />}
           </button>
@@ -324,7 +324,7 @@ export default function AnalyseDiagnosticIA() {
                 <div className="bg-gray-50 p-4 border-b">
                   <h3 className="font-medium">Diagnostics automatiques</h3>
                   <p className="text-sm text-gray-600">
-                    Basés sur les critères du cahier des charges et l'analyse du Pré-EDL
+                    Basés sur les critères du cahier des charges et l&apos;analyse du Pré-EDL
                   </p>
                 </div>
 
@@ -435,7 +435,7 @@ export default function AnalyseDiagnosticIA() {
 
                         {element.notes && (
                           <div className="mt-2 pl-8">
-                            <p className="text-sm text-gray-600">"{element.notes}"</p>
+                            <p className="text-sm text-gray-600">{element.notes}</p>
                           </div>
                         )}
 
@@ -510,7 +510,7 @@ export default function AnalyseDiagnosticIA() {
           >
             <h2 className="text-xl font-semibold flex items-center">
               <Zap className="h-5 w-5 mr-2" />
-              Plan d'action et transmission
+              Plan d&apos;action et transmission
             </h2>
             {expandedSections.actions ? <ChevronUp className="h-5 w-5" /> : <ChevronDown className="h-5 w-5" />}
           </button>
@@ -527,7 +527,7 @@ export default function AnalyseDiagnosticIA() {
                     </div>
                     <div className="ml-3">
                       <p className="text-sm text-blue-800">
-                        <span className="font-medium">1. Finaliser la validation des diagnostics</span> - Vérifier et ajuster les diagnostics proposés par l'IA.
+                        <span className="font-medium">1. Finaliser la validation des diagnostics</span> - Vérifier et ajuster les diagnostics proposés par l&apos;IA.
                       </p>
                     </div>
                   </div>
@@ -549,7 +549,7 @@ export default function AnalyseDiagnosticIA() {
                     </div>
                     <div className="ml-3">
                       <p className="text-sm text-blue-800">
-                        <span className="font-medium">3. Transmission au Responsable d'Agence</span> - Pour validation finale et signature numérique avant envoi au prestataire.
+                        <span className="font-medium">3. Transmission au Responsable d&apos;Agence</span> - Pour validation finale et signature numérique avant envoi au prestataire.
                       </p>
                     </div>
                   </div>
@@ -590,7 +590,7 @@ export default function AnalyseDiagnosticIA() {
                   className="px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 flex items-center"
                 >
                   <Check className="h-5 w-5 mr-2" />
-                  Soumettre au Responsable d'Agence
+                  Soumettre au Responsable d&apos;Agence
                 </button>
               </div>
             </div>

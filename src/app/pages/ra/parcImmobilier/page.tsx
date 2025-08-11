@@ -18,24 +18,17 @@ import {
   Layers,
   HomeIcon,
   Box,
-  Calendar,
   Clock,
   Thermometer,
-  Battery,
   Wifi,
   Droplets,
   Zap,
   Shield,
-  AlertCircle,
   CheckCircle2,
   XCircle,
-  Filter,
-  Plus,
   ChevronDown,
   ChevronUp,
-  Star,
   BarChart2,
-  PieChart,
   Building2,
   ClipboardList,
   FileSearch
@@ -317,7 +310,7 @@ const PropertyDetailModal: React.FC<{
                       </span>
                     </div>
                     <p className="text-sm text-gray-600 dark:text-neutral-400">
-                      Fait le {diag.date} • Valide jusqu'au {diag.validity}
+                      Fait le {diag.date} • Valide jusqu&apos;au {diag.validity}
                     </p>
                   </div>
                 ))}
@@ -459,7 +452,7 @@ export default function PropertiesPage() {
   const [viewMode, setViewMode] = useState<'list' | 'grid'>('list');
 
   // Données simulées basées sur le cahier des charges
-  const [properties, setProperties] = useState<Property[]>([
+  const [properties] = useState<Property[]>([
     {
       id: "RES-LUM-305",
       address: "Résidence Lumière, 12 Avenue des Champs, 75012 Paris",

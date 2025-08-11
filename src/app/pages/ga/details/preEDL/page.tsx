@@ -2,10 +2,11 @@
 
 import React, { useState, useRef, useEffect, JSX } from 'react';
 import { useRouter } from 'next/navigation';
+import Image from 'next/image';
 import { 
   ClipboardList, Home, User, FileText, Camera, 
   Check, AlertTriangle, Plus, X, ChevronDown,
-  Hammer, Droplet, Zap, Paintbrush, DoorOpen, Edit
+  Hammer, Droplet, Zap, Paintbrush, DoorOpen
 } from 'lucide-react';
 
 // Types
@@ -379,7 +380,7 @@ export default function PreEDLPage() {
                                 <div className="flex flex-wrap gap-2 mb-2">
                                   {element.photos.map((photo) => (
                                     <div key={photo.id} className="relative group">
-                                      <img
+                                      <Image
                                         src={photo.url}
                                         alt=""
                                         className="w-16 h-16 object-cover rounded-md border border-gray-200 hover:border-indigo-300 transition-colors cursor-pointer"
@@ -479,7 +480,7 @@ export default function PreEDLPage() {
                         <label className="block text-sm font-medium text-gray-700 mb-1">Photo</label>
                         {reading.photo ? (
                           <div className="flex items-center space-x-3">
-                            <img
+                            <Image
                               src={reading.photo.url}
                               alt=""
                               className="w-16 h-16 object-cover rounded-md border border-gray-200 cursor-pointer hover:border-indigo-300 transition-colors"
@@ -584,7 +585,7 @@ export default function PreEDLPage() {
                     onChange={(e) => setGeneralComments(e.target.value)}
                     className="w-full border border-gray-300 rounded-md p-2 text-sm focus:ring-indigo-500 focus:border-indigo-500"
                     rows={3}
-                    placeholder="Ajoutez des commentaires généraux sur l'état du bien..."
+                    placeholder="Ajoutez des commentaires généraux sur l&apos;état du bien..."
                   />
                 </div>
               </div>
@@ -650,7 +651,7 @@ export default function PreEDLPage() {
               <X size={24} />
             </button>
             <div className="flex items-center justify-center h-full">
-              <img
+              <Image
                 src={viewingPhoto.url}
                 alt=""
                 className="max-w-full max-h-[90vh] object-contain rounded-md"

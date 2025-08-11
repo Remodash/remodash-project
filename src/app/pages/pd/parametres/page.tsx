@@ -6,24 +6,15 @@ import {
   Home,
   Hammer,
   ClipboardCheck,
-  FileText,
   CreditCard,
   Settings,
   ChevronLeft,
   ChevronRight,
   User,
-  Mail,
-  Phone,
-  MapPin,
-  Building,
   Shield,
   Lock,
   Bell,
-  Calendar,
-  FileDigit,
   Banknote,
-  AlertCircle,
-  CheckCircle2,
   XCircle,
   Edit,
   Save,
@@ -313,7 +304,7 @@ const ContractorSettings: React.FC = () => {
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div className="space-y-4">
                     <div>
-                      <label className="block text-sm font-medium mb-1">Nom de l'entreprise</label>
+                      <label className="block text-sm font-medium mb-1">Nom de l&apos;entreprise</label>
                       {isEditing ? (
                         <input
                           type="text"
@@ -506,7 +497,7 @@ const ContractorSettings: React.FC = () => {
                       )}
                     </div>
                     <div>
-                      <label className="block text-sm font-medium mb-1">Date d'expiration</label>
+                      <label className="block text-sm font-medium mb-1">Date d&apos;expiration</label>
                       {isEditing ? (
                         <input
                           type="date"
@@ -584,7 +575,7 @@ const ContractorSettings: React.FC = () => {
                   <div className="flex items-center justify-between p-4 bg-gray-50 dark:bg-neutral-700 rounded-lg">
                     <div>
                       <h3 className="font-medium">Nouveaux bons de travail</h3>
-                      <p className="text-sm text-gray-500 dark:text-neutral-400">Recevoir une notification lorsqu'un nouveau bon de travail vous est attribué</p>
+                      <p className="text-sm text-gray-500 dark:text-neutral-400">Recevoir une notification lorsqu&apos;un nouveau bon de travail vous est attribué</p>
                     </div>
                     <label className="relative inline-flex items-center cursor-pointer">
                       <input 
@@ -600,7 +591,7 @@ const ContractorSettings: React.FC = () => {
                   <div className="flex items-center justify-between p-4 bg-gray-50 dark:bg-neutral-700 rounded-lg">
                     <div>
                       <h3 className="font-medium">Avertissement échéance</h3>
-                      <p className="text-sm text-gray-500 dark:text-neutral-400">Recevoir un rappel avant l'échéance d'un bon de travail</p>
+                      <p className="text-sm text-gray-500 dark:text-neutral-400">Recevoir un rappel avant l&apos;échéance d&apos;un bon de travail</p>
                     </div>
                     <label className="relative inline-flex items-center cursor-pointer">
                       <input 
@@ -616,7 +607,7 @@ const ContractorSettings: React.FC = () => {
                   <div className="flex items-center justify-between p-4 bg-gray-50 dark:bg-neutral-700 rounded-lg">
                     <div>
                       <h3 className="font-medium">Paiement reçu</h3>
-                      <p className="text-sm text-gray-500 dark:text-neutral-400">Recevoir une notification lorsqu'un paiement est effectué</p>
+                      <p className="text-sm text-gray-500 dark:text-neutral-400">Recevoir une notification lorsqu&apos;un paiement est effectué</p>
                     </div>
                     <label className="relative inline-flex items-center cursor-pointer">
                       <input 
@@ -670,10 +661,10 @@ const ContractorSettings: React.FC = () => {
 
                   <div className="p-4 bg-gray-50 dark:bg-neutral-700 rounded-lg">
                     <div className="flex justify-between items-center mb-2">
-                      <h3 className="font-medium">Délai d'expiration de session</h3>
+                      <h3 className="font-medium">Délai d&apos;expiration de session</h3>
                       <span className="text-sm font-medium">{securitySettings.sessionTimeout} minutes</span>
                     </div>
-                    <p className="text-sm text-gray-500 dark:text-neutral-400 mb-3">Définissez après combien de temps d'inactivité vous serez déconnecté automatiquement</p>
+                    <p className="text-sm text-gray-500 dark:text-neutral-400 mb-3">Définissez après combien de temps d&apos;inactivité vous serez déconnecté automatiquement</p>
                     <select
                       value={securitySettings.sessionTimeout}
                       onChange={handleSessionTimeoutChange}

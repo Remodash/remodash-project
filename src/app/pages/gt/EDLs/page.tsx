@@ -4,12 +4,8 @@ import React, { useState } from 'react';
 import Link from 'next/link';
 import { 
   Home,
-  FileText,
   ClipboardCheck,
-  Hammer,
-  Building,
-  Users,
-  CreditCard,
+  Hammer, 
   Settings,
   ChevronLeft,
   ChevronRight,
@@ -17,42 +13,22 @@ import {
   CheckCircle2,
   XCircle,
   Calendar,
-  Clock,
   FileSearch,
   AlertTriangle,
-  Info,
   FileSignature,
   ClipboardList,
-  Thermometer,
-  ShieldAlert,
-  Zap,
-  Droplets,
-  Bug,
-  Flame,
-  Factory,
-  ScanEye,
-  CalendarCheck,
-  HardHat,
   Construction,
   Check,
-  X,
   AlertOctagon,
   CircleDashed,
-  Percent,
-  FileSpreadsheet,
-  MapPin,
   User,
   ChevronDown,
   ChevronUp,
   Camera,
   ListChecks,
   HomeIcon,
-  Key,
   ClipboardEdit,
-  ShieldCheck,
-  FileCheck,
-  FileInput,
-  FileOutput, Files, FileEdit
+  FileInput, Files, FileEdit
 } from 'lucide-react';
 
 // Types basés sur le cahier des charges
@@ -486,7 +462,7 @@ const EDLDetailModal: React.FC<{
                   className="px-4 py-2 bg-green-600 text-white rounded-lg hover:bg-green-700 flex items-center"
                 >
                   <Check className="h-5 w-5 mr-2" />
-                  Valider l'EDL
+                  Valider l&apos;EDL
                 </button>
               </>
             )}
@@ -531,7 +507,7 @@ const EDLItemEditor: React.FC<{
       <div className="bg-white dark:bg-neutral-800 rounded-lg shadow-xl max-w-md w-full p-6">
         <div className="flex justify-between items-start mb-4">
           <h2 className="text-xl font-bold">
-            Modifier l'élément: {item.room} - {item.element}
+            Modifier l&apos;élément: {item.room} - {item.element}
           </h2>
           <button 
             onClick={onCancel}
@@ -544,7 +520,7 @@ const EDLItemEditor: React.FC<{
         <div className="space-y-4">
           <div>
             <label className="block text-sm font-medium text-gray-700 dark:text-neutral-300 mb-1">
-              État de l'élément
+              État de l&apos;élément
             </label>
             <div className="grid grid-cols-2 gap-2">
               <button

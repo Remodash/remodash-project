@@ -3,11 +3,11 @@
 import React, { useState } from 'react';
 import Link from 'next/link';
 import {
-  Home, FileText, ClipboardCheck, Construction,
-  Building, Users, CreditCard, Settings,
+  Home, FileText, ClipboardCheck, 
+  Building, Users,  Settings,
   ChevronLeft, ChevronRight, Mail, CalendarDays,
-  CheckCircle, AlertCircle, Clock, Plus,
-  Upload, Check, X, User, Search, Send, Wallet, Calendar
+  CheckCircle, AlertCircle, Plus,
+  X, User, Search, Send, Wallet, Calendar
 } from 'lucide-react';
 
 // Types principaux

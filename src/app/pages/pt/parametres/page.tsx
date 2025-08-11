@@ -6,18 +6,13 @@ import {
   Settings,
   ChevronDown,
   ChevronUp,
-  User,
   Building,
   FileText,
   Shield,
   Bell,
-  Mail,
-  Lock,
   Users,
-  Hammer,
   ClipboardCheck,
-  CreditCard,
-  Home
+  CreditCard
 } from 'lucide-react';
 
 const SettingsPage = () => {
@@ -50,13 +45,13 @@ const SettingsPage = () => {
     {
       id: 'new-work-order',
       label: 'Nouveau bon de travail',
-      description: 'Recevoir une notification lorsqu\'un nouveau bon de travail est créé',
+      description: 'Recevoir une notification lorsqu&apos;un nouveau bon de travail est créé',
       channels: ['email', 'inApp']
     },
     {
       id: 'work-order-status',
       label: 'Changement de statut',
-      description: 'Recevoir une notification lorsque le statut d\'un bon de travail change',
+      description: 'Recevoir une notification lorsque le statut d&apos;un bon de travail change',
       channels: ['email', 'inApp']
     },
     {
@@ -92,13 +87,13 @@ const SettingsPage = () => {
     },
     {
       id: 'session-timeout',
-      label: 'Délai d\'expiration de session',
-      description: 'Définir après combien de temps l\'inactivité déconnecte l\'utilisateur'
+      label: 'Délai d&apos;expiration de session',
+      description: 'Définir après combien de temps l&apos;inactivité déconnecte l&apos;utilisateur'
     },
     {
       id: 'ip-restrictions',
-      label: 'Restrictions d\'adresse IP',
-      description: 'Limiter l\'accès à certaines adresses IP'
+      label: 'Restrictions d&apos;adresse IP',
+      description: 'Limiter l&apos;accès à certaines adresses IP'
     }
   ];
 
@@ -106,7 +101,7 @@ const SettingsPage = () => {
     {
       id: 'immoware',
       label: 'ImmoWare',
-      description: 'Configuration de l\'intégration avec l\'ERP ImmoWare'
+      description: 'Configuration de l&apos;intégration avec l&apos;ERP ImmoWare'
     },
     {
       id: 'accounting',
@@ -129,7 +124,7 @@ const SettingsPage = () => {
               <h3 className="text-lg font-medium mb-4">Informations générales</h3>
               <div className="space-y-4">
                 <div>
-                  <label className="block text-sm font-medium mb-1">Nom de l'organisation</label>
+                  <label className="block text-sm font-medium mb-1">Nom de l&apos;organisation</label>
                   <input 
                     type="text" 
                     className="w-full p-2 border rounded-lg dark:bg-neutral-700"
@@ -141,7 +136,7 @@ const SettingsPage = () => {
                   <input 
                     type="text" 
                     className="w-full p-2 border rounded-lg dark:bg-neutral-700"
-                    placeholder="Entrez l'adresse de votre organisation"
+                    placeholder="Entrez l&apos;adresse de votre organisation"
                   />
                 </div>
                 <div>
@@ -162,12 +157,12 @@ const SettingsPage = () => {
             </div>
 
             <div className="bg-white dark:bg-neutral-800 rounded-lg shadow p-6">
-              <h3 className="text-lg font-medium mb-4">Préférences de l'application</h3>
+              <h3 className="text-lg font-medium mb-4">Préférences de l&apos;application</h3>
               <div className="space-y-4">
                 <div className="flex items-center justify-between">
                   <div>
                     <label className="block text-sm font-medium">Mode sombre</label>
-                    <p className="text-sm text-gray-500 dark:text-neutral-400">Activez le mode sombre pour l'interface</p>
+                    <p className="text-sm text-gray-500 dark:text-neutral-400">Activez le mode sombre pour l&apos;interface</p>
                   </div>
                   <label className="relative inline-flex items-center cursor-pointer">
                     <input type="checkbox" className="sr-only peer" />
@@ -177,7 +172,7 @@ const SettingsPage = () => {
                 <div className="flex items-center justify-between">
                   <div>
                     <label className="block text-sm font-medium">Langue</label>
-                    <p className="text-sm text-gray-500 dark:text-neutral-400">Définir la langue de l'interface</p>
+                    <p className="text-sm text-gray-500 dark:text-neutral-400">Définir la langue de l&apos;interface</p>
                   </div>
                   <select className="p-2 border rounded-lg dark:bg-neutral-700">
                     <option>Français</option>
@@ -221,7 +216,7 @@ const SettingsPage = () => {
                       </label>
                       <label className="flex items-center space-x-2">
                         <input type="checkbox" className="rounded" defaultChecked />
-                        <span>Notification dans l'application</span>
+                        <span>Notification dans l&apos;application</span>
                       </label>
                       <label className="flex items-center space-x-2">
                         <input type="checkbox" className="rounded" />
@@ -296,7 +291,7 @@ const SettingsPage = () => {
                   </div>
 
                   <div className="space-y-4">
-                    <h4 className="font-medium">Journal d'activité</h4>
+                    <h4 className="font-medium">Journal d&apos;activité</h4>
                     <div className="p-4 border rounded-lg">
                       <p className="text-sm text-gray-500 dark:text-neutral-400">
                         Affiche les connexions récentes et les activités suspectes
@@ -337,7 +332,7 @@ const SettingsPage = () => {
                             Configurer
                           </button>
                           <button className="p-2 border rounded-lg hover:bg-gray-100 dark:hover:bg-neutral-700">
-                            <span className="sr-only">Plus d'options</span>
+                            <span className="sr-only">Plus d&apos;options</span>
                             <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
                               <path d="M10 6a2 2 0 110-4 2 2 0 010 4zM10 12a2 2 0 110-4 2 2 0 010 4zM10 18a2 2 0 110-4 2 2 0 010 4z" />
                             </svg>
@@ -354,7 +349,7 @@ const SettingsPage = () => {
                         Accédez à la documentation API et générez des clés pour les développeurs
                       </p>
                       <button className="mt-2 px-4 py-2 border rounded-lg hover:bg-gray-100 dark:hover:bg-neutral-700">
-                        Accéder à l'API
+                        Accéder à l&apos;API
                       </button>
                     </div>
                   </div>
@@ -372,7 +367,7 @@ const SettingsPage = () => {
                 <div>
                   <h4 className="font-medium">Rôles et permissions</h4>
                   <p className="text-sm text-gray-500 dark:text-neutral-400">
-                    Configurez les rôles et les permissions pour les différents types d'utilisateurs
+                    Configurez les rôles et les permissions pour les différents types d&apos;utilisateurs
                   </p>
                 </div>
                 <button className="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700">
@@ -398,7 +393,7 @@ const SettingsPage = () => {
                         <td className="px-4 py-4 whitespace-nowrap">Jean Dupont</td>
                         <td className="px-4 py-4 whitespace-nowrap">jean.dupont@example.com</td>
                         <td className="px-4 py-4 whitespace-nowrap">Administrateur</td>
-                        <td className="px-4 py-4 whitespace-nowrap">Aujourd'hui, 10:30</td>
+                        <td className="px-4 py-4 whitespace-nowrap">Aujourd&apos;hui, 10:30</td>
                         <td className="px-4 py-4 whitespace-nowrap">
                           <button className="text-blue-600 hover:text-blue-800 dark:text-blue-400 dark:hover:text-blue-300">
                             Modifier
@@ -527,7 +522,7 @@ const SettingsPage = () => {
                   <div className="p-4 border rounded-lg">
                     <h5 className="font-medium mb-1">Notification de congé</h5>
                     <p className="text-sm text-gray-500 dark:text-neutral-400 mb-2">
-                      Configurer qui reçoit une notification lorsqu'un locataire donne congé
+                      Configurer qui reçoit une notification lorsqu&apos;un locataire donne congé
                     </p>
                     <button className="text-blue-600 hover:text-blue-800 dark:text-blue-400 dark:hover:text-blue-300 text-sm">
                       Configurer

@@ -15,10 +15,7 @@ import {
   ChevronRight,
   CheckCircle2,
   AlertCircle,
-  Clock,
   FileUp,
-  Send,
-  Save,
   X,
   Phone,
   MapPin,
@@ -27,17 +24,9 @@ import {
   Pencil,
   Trash2,
   Plus,
-  FileInput,
-  FileOutput,
   ArrowRightLeft,
-  Calendar,
   Search,
-  CircleDashed,
-  Check,
-  AlertTriangle,
-  Info, 
-  Mail,
-  Euro
+  Mail
 } from 'lucide-react';
 
 // Types
@@ -292,7 +281,7 @@ const TenantDetailModal: React.FC<{
               </div>
 
               <div>
-                <p className="text-sm text-gray-500 dark:text-neutral-400">Bénéficie d'APL</p>
+                <p className="text-sm text-gray-500 dark:text-neutral-400">Bénéficie d&apos;APL</p>
                 <p className="text-gray-800 dark:text-neutral-200">
                   {tenant.housingBenefits ? 'Oui' : 'Non'}
                 </p>
@@ -461,7 +450,7 @@ export default function TenantsPage() {
   const [searchTerm, setSearchTerm] = useState('');
 
   // Sample data from the provided file
-  const [tenants, setTenants] = useState<Tenant[]>([
+  const [tenants] = useState<Tenant[]>([
     {
       id: '1',
       tenantId: 'T1001',

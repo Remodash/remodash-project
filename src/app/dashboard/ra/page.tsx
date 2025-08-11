@@ -2,6 +2,7 @@
 
 import React, { useState } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import { 
   Home,
   FileText,
@@ -16,9 +17,7 @@ import {
   AlertCircle,
   CheckCircle2,
   XCircle,
-  Calendar,
   Clock,
-  ArrowLeft,
   FileSearch,
   HardHat,
   AlertTriangle,
@@ -326,7 +325,7 @@ const WorkOrderDetailModal: React.FC<{
             </div>
 
             <div>
-              <h3 className="font-medium text-lg mb-2">Détails de l'intervention</h3>
+              <h3 className="font-medium text-lg mb-2">Détails de l&apos;intervention</h3>
               <div className="space-y-2">
                 <p><span className="font-medium">Type travaux:</span> {workOrder.workType}</p>
                 <p><span className="font-medium">Demandé par:</span> {workOrder.requestedBy}</p>
@@ -385,7 +384,7 @@ const WorkOrderDetailModal: React.FC<{
               <div className="grid grid-cols-2 sm:grid-cols-3 gap-3">
                 {workOrder.photos.map((photo, index) => (
                   <div key={index} className="border rounded-lg overflow-hidden">
-                    <img 
+                    <Image 
                       src={photo} 
                       alt={`Photo du logement ${index + 1}`} 
                       className="w-full h-32 object-cover"
@@ -973,7 +972,7 @@ export default function AgencyManagerDashboard() {
         p-6 overflow-y-auto
       `}>
         <h1 className="text-3xl font-bold mb-6 text-gray-800 dark:text-neutral-200">
-          Tableau de Bord Responsable d'Agence
+          Tableau de Bord Responsable d&apos;Agence
         </h1>
         
         <div className="mb-6 border-b border-gray-200 dark:border-neutral-700">

@@ -3,10 +3,8 @@
 import React, { useState } from 'react';
 import Link from 'next/link';
 import { 
-  Home, Building, Users, ClipboardList, FileText,
-  Mail, CalendarDays, CreditCard, Settings, 
-  ChevronLeft, ChevronRight, CheckCircle2,
-  AlertCircle, Clock, FileUp, Send, Save, X, Hammer, Files, FileSearch, FileEdit, ClipboardCheck
+  Home, Settings, 
+  ChevronLeft, ChevronRight, Hammer, Files, FileSearch, FileEdit, ClipboardCheck
 } from 'lucide-react';
 import { 
   EyeIcon, 
@@ -134,7 +132,7 @@ interface Intervention {
 export default function GTDashboard() {
   const [isSidebarExpanded, setIsSidebarExpanded] = useState(true);
   const [isModalOpen, setIsModalOpen] = useState(false);
-  const [interventions, setInterventions] = useState<Intervention[]>([
+  const [interventions] = useState<Intervention[]>([
     {
       id: 1,
       property: 'Apt 305, Résidence Lumière',
@@ -278,7 +276,7 @@ export default function GTDashboard() {
                   />
                 </div>
                 <div>
-                  <label className="block mb-2 text-gray-700 dark:text-neutral-300">Type d'Intervention</label>
+                  <label className="block mb-2 text-gray-700 dark:text-neutral-300">Type d&apos;Intervention</label>
                   <select 
                     className="w-full border rounded-md p-2 dark:bg-neutral-800 dark:border-neutral-700 dark:text-neutral-200"
                   >
@@ -292,7 +290,7 @@ export default function GTDashboard() {
                   <label className="block mb-2 text-gray-700 dark:text-neutral-300">Description</label>
                   <textarea 
                     className="w-full border rounded-md p-2 dark:bg-neutral-800 dark:border-neutral-700 dark:text-neutral-200" 
-                    placeholder="Détails de l'intervention"
+                    placeholder="Détails de l&apos;intervention"
                     rows={3}
                   ></textarea>
                 </div>

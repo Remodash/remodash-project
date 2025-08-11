@@ -3,9 +3,8 @@
 import React, { useState } from 'react';
 import { 
   ClipboardSignature, FileText, AlertTriangle, Check, ChevronDown, 
-  ChevronUp, Wrench, Hammer, Printer, Download, 
-  Send, UserCheck, MessageSquare, QrCode,
-  Home, User, Zap, CircleAlert, ClipboardList,
+  ChevronUp, Printer, Download, 
+  Send, UserCheck, MessageSquare, QrCode, Zap, CircleAlert, ClipboardList,
   Thermometer, ShieldAlert, Battery, Flame, HardHat
 } from 'lucide-react';
 import Link from 'next/link';
@@ -203,7 +202,7 @@ export default function ApprobationRA() {
             <div>
               <h1 className="text-2xl font-bold flex items-center">
                 <ClipboardSignature className="h-8 w-8 mr-3" />
-                Approbation Responsable d'Agence
+                Approbation Responsable d&apos;Agence
               </h1>
               <p className="mt-2 text-blue-100">
                 Validation et signature du bon de diagnostic
@@ -247,7 +246,7 @@ export default function ApprobationRA() {
           >
             <h2 className="text-xl font-semibold flex items-center">
               <FileText className="h-5 w-5 mr-2" />
-              Synthèse de l'analyse
+              Synthèse de l&apos;analyse
             </h2>
             {expandedSections.summary ? <ChevronUp className="h-5 w-5" /> : <ChevronDown className="h-5 w-5" />}
           </button>
@@ -407,7 +406,7 @@ export default function ApprobationRA() {
 
                         {element.notes && (
                           <div className="mt-2 pl-8">
-                            <p className="text-sm text-gray-600">"{element.notes}"</p>
+                            <p className="text-sm text-gray-600">{element.notes}</p>
                           </div>
                         )}
                       </div>
@@ -436,7 +435,7 @@ export default function ApprobationRA() {
             <div className="px-6 pb-6 space-y-4">
               <div className="border rounded-lg p-6 bg-gray-50">
                 <div className="flex items-center justify-between mb-4">
-                  <h3 className="text-lg font-medium">Approbation Responsable d'Agence</h3>
+                  <h3 className="text-lg font-medium">Approbation Responsable d&apos;Agence</h3>
                   <label className="inline-flex items-center cursor-pointer">
                     <input
                       type="checkbox"

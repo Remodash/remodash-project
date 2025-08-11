@@ -5,19 +5,13 @@ import Link from 'next/link';
 import { 
   Home,
   FileText,
-  ClipboardCheck,
-  Hammer,
   Building,
   Users,
-  CreditCard,
-  Settings,
   ChevronLeft,
   ChevronRight,
   CheckCircle2,
   AlertCircle,
-  Clock,
   FileUp,
-  Send,
   Save,
   X,
   Phone,
@@ -27,17 +21,11 @@ import {
   Pencil,
   Trash2,
   Plus,
-  FileInput,
-  FileOutput,
   ArrowRightLeft,
   Calendar,
   Search,
   CircleDashed,
-  Check,
-  AlertTriangle,
-  Info, 
-  Mail,
-  Construction, Wallet
+  Mail, Wallet, Settings
 } from 'lucide-react';
 import * as XLSX from 'xlsx';
 
@@ -481,7 +469,7 @@ const TenantsDashboard = () => {
 
   const handleEditTenant = (tenant: Tenant) => {
     setSelectedTenant(tenant);
-    const { id, tenantId, ...tenantData } = tenant;
+    const {...tenantData } = tenant;
     setFormData(tenantData);
     setIsEditModalOpen(true);
   };
@@ -1112,7 +1100,7 @@ const TenantsDashboard = () => {
                           onChange={handleInputChange}
                           className="h-5 w-5 rounded border-gray-300 text-blue-600 focus:ring-blue-500 dark:bg-neutral-600 dark:border-neutral-500"
                         />
-                        <label className="text-gray-700 dark:text-neutral-300">Bénéficie d'APL</label>
+                        <label className="text-gray-700 dark:text-neutral-300">Bénéficie d&apos;APL</label>
                       </div>
                     </div>
 
@@ -1416,7 +1404,7 @@ const TenantsDashboard = () => {
                     </div>
 
                     <div>
-                      <p className="text-sm text-gray-500 dark:text-neutral-400">Bénéficie d'APL</p>
+                      <p className="text-sm text-gray-500 dark:text-neutral-400">Bénéficie d&apos;APL</p>
                       <p className="text-gray-800 dark:text-neutral-200">
                         {selectedTenant.housingBenefits ? 'Oui' : 'Non'}
                       </p>

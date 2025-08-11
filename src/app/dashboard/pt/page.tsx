@@ -5,7 +5,7 @@ import Link from 'next/link';
 import { 
   Home, Hammer, ClipboardCheck, CreditCard, Settings,
   ChevronLeft, ChevronRight, AlertCircle, CheckCircle2,
-  Clock, FileSearch, FileSignature, ClipboardList,
+  Clock, FileSearch, ClipboardList,
   Plug, Droplet, Paintbrush, DoorOpen, Lock,
   Fan, Sparkles, HardHat, Wrench, X
 } from 'lucide-react';
@@ -212,10 +212,10 @@ const WorkOrderDetailsModal: React.FC<WorkOrderDetailsModalProps> = ({
   onClose, 
   onUpdate 
 }) => {
-  const [description, setDescription] = useState(workOrder.description);
-  const [actualCost, setActualCost] = useState(workOrder.actualCost || 0);
-  const [tasks, setTasks] = useState(workOrder.tasks);
-  const [notes, setNotes] = useState(workOrder.notes || '');
+  const [description] = useState(workOrder.description);
+  const [actualCost] = useState(workOrder.actualCost || 0);
+  const [tasks] = useState(workOrder.tasks);
+  const [notes] = useState(workOrder.notes || '');
 
   const handleSubmit = () => {
     const updatedWorkOrder: WorkOrder = {
@@ -420,8 +420,8 @@ const ContractorDashboard: React.FC = () => {
             <h3 className="mt-2 text-lg font-medium">Aucun bon de travail trouvé</h3>
             <p className="mt-1 text-gray-500 dark:text-neutral-400">
               {filter === 'all' 
-                ? "Vous n'avez aucun bon de travail" 
-                : `Vous n'avez aucun bon de travail ${filter === 'pending' ? 'en attente' : filter === 'in_progress' ? 'en cours' : 'terminé'}`}
+                ? "Vous n&apos;avez aucun bon de travail" 
+                : `Vous n&apos;avez aucun bon de travail ${filter === 'pending' ? 'en attente' : filter === 'in_progress' ? 'en cours' : 'terminé'}`}
             </p>
           </div>
         )}

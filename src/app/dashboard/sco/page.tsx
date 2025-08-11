@@ -5,7 +5,6 @@ import Link from 'next/link';
 import { 
   Home,
   CreditCard,
-  FileText,
   AlertCircle,
   Clock,
   CheckCircle2,
@@ -15,8 +14,6 @@ import {
   ChevronRight,
   DollarSign,
   Receipt,
-  Calendar,
-  User
 } from 'lucide-react';
 
 // Types basés sur le cahier des charges
@@ -135,7 +132,7 @@ export default function AccountingDashboard() {
   const [activeTab, setActiveTab] = useState<'overview' | 'payments' | 'unpaid' | 'legal'>('overview');
 
   // Données simulées basées sur le cahier des charges
-  const [financialOverview, setFinancialOverview] = useState<FinancialOverview>({
+  const [financialOverview] = useState<FinancialOverview>({
     totalReceivable: 125430,
     totalCollected: 98450,
     overdueAmount: 26980,
@@ -143,7 +140,7 @@ export default function AccountingDashboard() {
     pendingLegalCases: 12
   });
 
-  const [tenantPayments, setTenantPayments] = useState<TenantPayment[]>([
+  const [tenantPayments] = useState<TenantPayment[]>([
     {
       id: 1,
       tenant: {
@@ -200,7 +197,7 @@ export default function AccountingDashboard() {
     }
   ]);
 
-  const [legalCases, setLegalCases] = useState<LegalCase[]>([
+  const [legalCases] = useState<LegalCase[]>([
     {
       id: 1,
       tenant: {

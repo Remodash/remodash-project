@@ -4,7 +4,6 @@ import React, { useState } from 'react';
 import Link from 'next/link';
 import { 
   Home, 
-  ClipboardList, 
   FileText, 
   Calendar, 
   Settings, 
@@ -13,12 +12,7 @@ import {
   CheckCircle,
   AlertTriangle,
   Clock,
-  FileUp,
-  
- Building, Users,  
-  Mail, CalendarDays, CreditCard,  
-    CheckCircle2,
-  AlertCircle,   Send, Save, X, ClipboardCheck, Hammer
+  FileUp, CreditCard, ClipboardCheck, Hammer
 } from 'lucide-react';
 import { 
   EyeIcon, 
@@ -170,7 +164,7 @@ export default function PDDashboard() {
       scheduledDate: '2024-07-20',
       address: '15 Rue de la Paix, 75002 Paris',
       contactPerson: 'Lucie Bernard - 07 65 43 21 09',
-      accessDetails: 'Accès par l\'arrière du bâtiment, code porte 1987'
+      accessDetails: 'Accès par l&apos;arrière du bâtiment, code porte 1987'
     }
   ]);
 
@@ -361,7 +355,7 @@ export default function PDDashboard() {
                   <div className="space-y-2">
                     <p><span className="font-medium">Adresse:</span> {selectedDiagnostic.address}</p>
                     <p><span className="font-medium">Contact:</span> {selectedDiagnostic.contactPerson}</p>
-                    <p><span className="font-medium">Modalités d'accès:</span> {selectedDiagnostic.accessDetails}</p>
+                    <p><span className="font-medium">Modalités d&apos;accès:</span> {selectedDiagnostic.accessDetails}</p>
                   </div>
                 </div>
               </div>

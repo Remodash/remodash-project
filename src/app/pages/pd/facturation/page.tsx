@@ -11,16 +11,13 @@ import {
   Settings,
   ChevronLeft,
   ChevronRight,
-  Calendar,
   FileSearch,
   Filter,
   Search,
   Download,
   Printer,
-  Plus,
   X,
   Banknote,
-  Clock,
   CheckCircle2,
   XCircle,
   AlertCircle,
@@ -28,14 +25,12 @@ import {
   ChevronUp,
   ArrowUpDown,
   MoreVertical,
-  HardHat,
   UserCheck,
-  FileSignature,
-  Construction
+  FileSignature
 } from 'lucide-react';
 
 // Types définis pour une meilleure sécurité TypeScript
-type InvoiceStatus = 'draft' | 'sent' | 'paid' | 'overdue' | 'cancelled';
+//type InvoiceStatus = 'draft' | 'sent' | 'paid' | 'overdue' | 'cancelled';
 type WorkOrderStatus = 'pending' | 'in_progress' | 'completed' | 'validated' | 'paid' | 'disputed';
 type SortDirection = 'asc' | 'desc';
 
@@ -204,8 +199,8 @@ const WorkOrderDetailsModal: React.FC<{
             <div>
               <h3 className="font-medium text-lg mb-2">Dates</h3>
               <div className="space-y-2">
-                <p><span className="font-medium">Date d'émission:</span> {new Date(workOrder.issueDate).toLocaleDateString()}</p>
-                <p><span className="font-medium">Date d'échéance:</span> {new Date(workOrder.dueDate).toLocaleDateString()}</p>
+                <p><span className="font-medium">Date d&apos;émission:</span> {new Date(workOrder.issueDate).toLocaleDateString()}</p>
+                <p><span className="font-medium">Date d&apos;échéance:</span> {new Date(workOrder.dueDate).toLocaleDateString()}</p>
                 {workOrder.completionDate && (
                   <p><span className="font-medium">Date de complétion:</span> {new Date(workOrder.completionDate).toLocaleDateString()}</p>
                 )}

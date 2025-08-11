@@ -153,7 +153,7 @@ export default function LoginPage() {
 
         <div className="mt-8 text-center">
           <p className="text-sm text-blue-300">
-            Don't have an account?{' '}
+            Don&apos;t have an account?{' '}
             <a href="#" className="font-medium text-blue-100 hover:text-white transition-colors">
               Sign up
             </a>

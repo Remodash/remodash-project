@@ -13,12 +13,9 @@ import {
   AlertCircle,
   Clock,
   CheckCircle2,
-  XCircle,
-  Calendar,
   FileSearch,
   User,
   Building,
-  MapPin,
   Ruler,
   Thermometer,
   ShieldAlert,
@@ -192,7 +189,7 @@ export default function GuardianPreEDL() {
   const [searchTerm, setSearchTerm] = useState('');
 
   // Données simulées
-  const [preEDLs, setPreEDLs] = useState<PreEDL[]>([
+  const [preEDLs] = useState<PreEDL[]>([
     {
       id: 1,
       reference: 'PEDL-2023-0425',

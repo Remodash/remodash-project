@@ -4,53 +4,32 @@ import React, { useState } from 'react';
 import Link from 'next/link';
 import { 
   Home,
-  FileText,
   ClipboardCheck,
   Hammer,
   Building,
-  Users,
-  CreditCard,
   Settings,
   ChevronLeft,
   ChevronRight,
-  AlertCircle,
   CheckCircle2,
   XCircle,
   Calendar,
   Clock,
   FileSearch,
-  AlertTriangle,
-  Info,
-  FileSignature,
   ClipboardList,
-  Mail,
   Plus,
-  Send,
   User,
   Search,
   CircleDashed,
   Check,
-  X,
   ChevronUp,
   ChevronDown,
-  Phone,
-  MapPin,
-  Ruler,
   Hash,
-  BookOpen,
-  AlertOctagon,
-  FileInput,
   FileOutput,
   CalendarDays,
-  MessageSquare, 
-  Construction,
   ArrowUpDown,
-  MoreHorizontal,
   Camera,
   Image,
   ListChecks,
-  FileSpreadsheet,
-  HomeIcon,
   Scan, 
   Files, FileEdit
 } from 'lucide-react';
@@ -1000,7 +979,7 @@ export default function PreEDLPage() {
   };
 
   const sortedPreEDLs = React.useMemo(() => {
-    let sortablePreEDLs = [...preEDLs];
+    const sortablePreEDLs = [...preEDLs];
     if (sortConfig !== null) {
       sortablePreEDLs.sort((a, b) => {
         if (sortConfig.key === 'preEdlId') {

@@ -7,17 +7,12 @@ import {
   Hammer,
   ClipboardCheck,
   FileText,
-  Building,
-  Users,
   CreditCard,
   Settings,
   ChevronLeft,
   ChevronRight,
   Calendar,
-  Clock,
   FileSearch,
-  FileSignature,
-  ClipboardList,
   Filter,
   Search,
   Download,
@@ -27,7 +22,6 @@ import {
   Paintbrush,
   Plug,
   Droplet,
-  Brush,
   DoorOpen,
   Lock,
   Fan,
@@ -446,7 +440,7 @@ export default function ContractorHistory() {
   });
 
   // Données simulées
-  const [workOrders, setWorkOrders] = useState<WorkOrder[]>([
+  const [workOrders] = useState<WorkOrder[]>([
     {
       id: 1,
       workOrderId: 2042,
@@ -746,7 +740,7 @@ export default function ContractorHistory() {
 
           <div className="bg-white dark:bg-neutral-800 rounded-lg shadow p-6">
             <div className="flex items-center justify-between">
-              <h3 className="text-lg font-medium text-gray-900 dark:text-neutral-200">Chiffre d'affaires</h3>
+              <h3 className="text-lg font-medium text-gray-900 dark:text-neutral-200">Chiffre d&apos;affaires</h3>
               <span className="bg-green-100 text-green-800 text-sm font-medium px-2.5 py-0.5 rounded-full dark:bg-green-900 dark:text-green-200">
                 {filteredWorkOrders.filter(wo => wo.status === 'completed').length}
               </span>

@@ -6,21 +6,15 @@ import {
   Home,
   FileText,
   ClipboardCheck,
-  Hammer,
-  Building,
-  Users,
+  Hammer,  
   CreditCard,
   Settings,
   ChevronLeft,
   ChevronRight,
   AlertCircle,
   CheckCircle2,
-  XCircle,
   Calendar,
-  Clock,
   FileSearch,
-  AlertTriangle,
-  Info,
   FileSignature,
   ClipboardList,
   Thermometer,
@@ -31,15 +25,11 @@ import {
   Flame,
   Factory,
   ScanEye,
-  CalendarCheck,
   Upload,
   Check,
   X,
   Camera,
-  FileInput,
-  FileOutput,
   FileDigit,
-  FileSpreadsheet,
   FileArchive,
   FileImage,
   File
@@ -315,7 +305,7 @@ const DiagnosticResponseForm: React.FC<{
 
               <div className="flex items-center">
                 <Calendar className="h-4 w-4 mr-2" />
-                <span className="font-medium">Date d'intervention:</span>
+                <span className="font-medium">Date d&apos;intervention:</span>
                 <input 
                   type="date" 
                   className="ml-2 p-1 border rounded dark:bg-neutral-700" 

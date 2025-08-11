@@ -11,31 +11,20 @@ import {
   Settings,
   ChevronLeft,
   ChevronRight,
-  Calendar,
   FileSearch,
   Filter,
   Search,
   Download,
   Printer,
-  Plus,
   X,
-  Banknote,
-  Clock,
   CheckCircle2,
-  XCircle,
   AlertCircle,
   ChevronDown,
   ChevronUp,
   ArrowUpDown,
   MoreVertical,
   HardHat,
-  UserCheck,
-  FileSignature,
   Construction,
-  History,
-  Clock3,
-  CalendarCheck,
-  Check,
   AlertTriangle
 } from 'lucide-react';
 
@@ -271,9 +260,9 @@ const WorkOrderDetailsModal: React.FC<{
             <div>
               <h3 className="font-medium text-lg mb-2">Dates</h3>
               <div className="space-y-2">
-                <p><span className="font-medium">Date d'émission:</span> {new Date(workOrder.issueDate).toLocaleDateString()}</p>
+                <p><span className="font-medium">Date d&apos;émission:</span> {new Date(workOrder.issueDate).toLocaleDateString()}</p>
                 <p><span className="font-medium">Date de début:</span> {new Date(workOrder.startDate).toLocaleDateString()}</p>
-                <p><span className="font-medium">Date d'échéance:</span> {new Date(workOrder.dueDate).toLocaleDateString()}</p>
+                <p><span className="font-medium">Date d&apos;échéance:</span> {new Date(workOrder.dueDate).toLocaleDateString()}</p>
                 {workOrder.completionDate && (
                   <p className={wasDelayed ? 'text-red-600 dark:text-red-400' : ''}>
                     <span className="font-medium">Date de complétion:</span> {new Date(workOrder.completionDate).toLocaleDateString()}
@@ -507,7 +496,7 @@ const ContractorHistory: React.FC = () => {
   });
 
   // Données simulées basées sur le cahier des charges
-  const [workOrders, setWorkOrders] = useState<WorkOrder[]>([
+  const [workOrders] = useState<WorkOrder[]>([
     {
       id: 1,
       workOrderNumber: '2024-001',
@@ -869,7 +858,7 @@ const ContractorHistory: React.FC = () => {
         <div className="mb-6">
           <h1 className="text-2xl font-bold mb-2">Historique des Travaux</h1>
           <p className="text-gray-600 dark:text-neutral-400">
-            Consultez l'historique complet de vos interventions et facturations
+            Consultez l&apos;historique complet de vos interventions et facturations
           </p>
         </div>
 

@@ -6,17 +6,12 @@ import {
   Home,
   Gavel,
   FileText,
-  AlertCircle,
   Clock,
   Calendar,
-  User,
-  Mail,
   Landmark,
   ChevronLeft,
   ChevronRight,
   Search,
-  Filter,
-  Download,
   Plus,
   Settings
 } from 'lucide-react';
@@ -478,7 +473,7 @@ export default function LegalDashboard() {
               <ChevronLeft className="h-4 w-4" />
             </button>
             <button className="px-3 py-1 bg-blue-600 text-white rounded text-sm hover:bg-blue-700">
-              Aujourd'hui
+              Aujourd&apos;hui
             </button>
             <button className="p-2 rounded hover:bg-gray-100 dark:hover:bg-neutral-700">
               <ChevronRight className="h-4 w-4" />

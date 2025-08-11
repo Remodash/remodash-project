@@ -16,13 +16,8 @@ import {
   Search,
   BarChart2,
   PieChart,
-  DollarSign,
   AlertCircle,
   Clock,
-  CheckCircle2,
-  XCircle,
-  Filter,
-  Plus,
   ChevronDown,
   ChevronUp,
   Download
@@ -149,7 +144,7 @@ export default function FinancialIndicatorsPage() {
   const [searchTerm, setSearchTerm] = useState('');
 
   // Données simulées basées sur le cahier des charges
-  const [metrics, setMetrics] = useState<FinancialMetric[]>([
+  const [metrics] = useState<FinancialMetric[]>([
     {
       id: '1',
       label: 'Total impayés',
@@ -206,7 +201,7 @@ export default function FinancialIndicatorsPage() {
     }
   ]);
 
-  const [unpaidItems, setUnpaidItems] = useState<UnpaidItem[]>([
+  const [unpaidItems] = useState<UnpaidItem[]>([
     {
       id: '1',
       tenant: 'Dupont Jean',
@@ -245,7 +240,7 @@ export default function FinancialIndicatorsPage() {
     }
   ]);
 
-  const [workCosts, setWorkCosts] = useState<WorkCost[]>([
+  const [workCosts] = useState<WorkCost[]>([
     {
       id: '1',
       property: 'RES-LUM-305',
@@ -288,7 +283,7 @@ export default function FinancialIndicatorsPage() {
     }
   ]);
 
-  const [penalties, setPenalties] = useState<Penalty[]>([
+  const [penalties] = useState<Penalty[]>([
     {
       id: '1',
       contractor: 'BTP Services',
@@ -455,7 +450,7 @@ export default function FinancialIndicatorsPage() {
               }`}
             >
               <BarChart2 className="h-4 w-4 mr-1" />
-              Vue d'ensemble
+              Vue d&apos;ensemble
             </button>
             <button
               onClick={() => setActiveTab('unpaid')}
@@ -555,7 +550,7 @@ export default function FinancialIndicatorsPage() {
                 </h3>
                 <div className="h-64 flex items-center justify-center">
                   <div className="text-gray-400 dark:text-neutral-600">
-                    Graphique d'évolution des coûts
+                    Graphique d&apos;évolution des coûts
                   </div>
                 </div>
               </div>

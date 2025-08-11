@@ -2,6 +2,7 @@
 
 import React, { useState } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import { 
   Home,
   FileText,
@@ -16,19 +17,11 @@ import {
   AlertCircle,
   CheckCircle2,
   XCircle,
-  Calendar,
   Clock,
-  ArrowLeft,
   FileSearch,
   HardHat,
-  AlertTriangle,
-  Info,
   FileSignature,
   ClipboardList,
-  Construction,
-  DollarSign,
-  Percent,
-  UserCheck,
   CalendarCheck,
   AlertOctagon
 } from 'lucide-react';
@@ -224,7 +217,7 @@ const WorkOrderDetailModal: React.FC<{
             </div>
 
             <div>
-              <h3 className="font-medium text-lg mb-2">Détails de l'intervention</h3>
+              <h3 className="font-medium text-lg mb-2">Détails de l&apos;intervention</h3>
               <div className="space-y-2">
                 <p>
                   <span className="font-medium">Type travaux:</span> 
@@ -375,7 +368,7 @@ const WorkOrderDetailModal: React.FC<{
               <div className="grid grid-cols-2 sm:grid-cols-3 gap-3">
                 {workOrder.photos.map((photo, index) => (
                   <div key={index} className="border rounded-lg overflow-hidden">
-                    <img 
+                    <Image 
                       src={photo} 
                       alt={`Photo du logement ${index + 1}`} 
                       className="w-full h-32 object-cover"
@@ -552,7 +545,7 @@ export default function WorkOrderApprovalPage() {
       requestedBy: 'GT Lefevre',
       requestedDate: '2024-08-05',
       deadline: '2024-08-10',
-      justification: 'Nettoyage complet après départ locataire. État de saleté anormal constaté à l\'EDL sortant.',
+      justification: 'Nettoyage complet après départ locataire. État de saleté anormal constaté à l&apos;EDL sortant.',
       items: [
         {
           description: 'Nettoyage complet (sol, murs, sanitaires)',

@@ -2,12 +2,13 @@
 
 import React, { useState } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import {
   Home, ClipboardList, Camera, FileText, 
   CheckCircle, AlertCircle, Clock, Settings,
   ChevronLeft, ChevronRight, Wrench, Paintbrush,
   Droplet, Plug, DoorOpen, Lock, Fan, Sparkles,
-  HardHat, Calendar, Upload, Check, X
+  HardHat, Calendar, Upload, X
 } from 'lucide-react';
 
 // Types principaux
@@ -324,7 +325,7 @@ const DailyReportModal = ({
                 <div className="mt-2 flex flex-wrap gap-2">
                   {photos.map((photo, idx) => (
                     <div key={idx} className="relative">
-                      <img src={photo} alt={`Photo ${idx + 1}`} className="h-16 w-16 object-cover rounded" />
+                      <Image src={photo} alt={`Photo ${idx + 1}`} className="h-16 w-16 object-cover rounded" />
                       <button
                         onClick={() => setPhotos(photos.filter((_, i) => i !== idx))}
                         className="absolute -top-2 -right-2 bg-red-500 text-white rounded-full p-1"
@@ -361,7 +362,7 @@ const DailyReportModal = ({
 const GuardDashboard = () => {
   const [isSidebarExpanded, setIsSidebarExpanded] = useState(true);
   const [selectedWorkOrder, setSelectedWorkOrder] = useState<WorkOrder | null>(null);
-  const [selectedPreEDL, setSelectedPreEDL] = useState<PreEDLTask[] | null>(null);
+  //const [selectedPreEDL, setSelectedPreEDL] = useState<PreEDLTask[] | null>(null);
   const [showReportModal, setShowReportModal] = useState(false);
   const [filter, setFilter] = useState<'all' | 'pending' | 'in_progress' | 'completed'>('in_progress');
 
@@ -423,7 +424,7 @@ const GuardDashboard = () => {
     }
   ]);
 
-  const [preEDLTasks, setPreEDLTasks] = useState<PreEDLTask[]>([
+  const [preEDLTasks] = useState<PreEDLTask[]>([
     {
       id: 'pre-1',
       room: 'Séjour',
@@ -610,7 +611,7 @@ const GuardDashboard = () => {
                 <CheckCircle className="h-10 w-10 mx-auto text-gray-400 dark:text-gray-600" />
                 <h3 className="mt-2 text-lg font-medium">Aucun Pré-EDL à réaliser</h3>
                 <p className="mt-1 text-gray-500 dark:text-gray-400">
-                  Vous n'avez pas de Pré-État des Lieux programmé aujourd'hui
+                  Vous n&apos;avez pas de Pré-État des Lieux programmé aujourd&apos;hui
                 </p>
               </div>
             )}
@@ -727,7 +728,7 @@ const GuardDashboard = () => {
                         {report.photos.length > 0 && (
                           <div className="mt-2 flex flex-wrap gap-2">
                             {report.photos.map((photo, photoIdx) => (
-                              <img 
+                              <Image 
                                 key={photoIdx} 
                                 src={photo} 
                                 alt={`Rapport ${idx + 1} - Photo ${photoIdx + 1}`} 

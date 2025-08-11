@@ -7,9 +7,8 @@ import {
   Eye, EyeOff, Search, Trash2, Pencil,
   Building, HardHat, ClipboardList, ClipboardCheck,
   CreditCard, Key, Lock, LayoutDashboard,
-  Shield, Mail, Settings, UserCog, UserCircle,
-  Home, Hammer, AlertCircle, Clock, PieChart,
-  X, ArrowLeft, FileSearch, AlertTriangle, Info, Phone
+  Shield, Settings, UserCog, UserCircle,
+  X, Phone
 } from 'lucide-react';
 import Link from 'next/link';
 
@@ -185,7 +184,7 @@ const Sidebar: React.FC<SidebarProps> = ({ isExpanded, toggleSidebar, currentRol
 
 const AdminDashboard: React.FC = () => {
   const [isSidebarExpanded, setIsSidebarExpanded] = useState(true);
-  const [currentRole, setCurrentRole] = useState<UserRole>('admin');
+  const [currentRole] = useState<UserRole>('admin');
   const [users, setUsers] = useState<User[]>([
     {
       id: '1', firstName: 'Admin', lastName: 'System', email: 'admin@remodash.com', role: 'admin', phone: '0600000000',
@@ -674,7 +673,7 @@ const AdminDashboard: React.FC = () => {
             <div className="p-6">
               <div className="flex justify-between items-start mb-4">
                 <h2 className="text-xl font-bold">
-                  {isEditUserModalOpen ? 'Modifier l\'Utilisateur' : 'Ajouter un Utilisateur'}
+                  {isEditUserModalOpen ? 'Modifier l&apos;Utilisateur' : 'Ajouter un Utilisateur'}
                 </h2>
                 <button 
                   onClick={() => isEditUserModalOpen ? setIsEditUserModalOpen(false) : setIsAddUserModalOpen(false)} 
@@ -764,7 +763,7 @@ const AdminDashboard: React.FC = () => {
                   <div className="bg-yellow-50 dark:bg-yellow-900/20 border border-yellow-200 dark:border-yellow-800 rounded-lg p-3">
                     <p className="text-yellow-800 dark:text-yellow-200 text-sm flex items-center">
                       <Lock className="inline h-4 w-4 mr-2" />
-                      Pour modifier le mot de passe, un lien de réinitialisation sera envoyé à l'utilisateur.
+                      Pour modifier le mot de passe, un lien de réinitialisation sera envoyé à l&apos;utilisateur.
                     </p>
                   </div>
                 )}

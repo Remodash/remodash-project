@@ -1,24 +1,13 @@
 'use client';
 
 import React, { useState, useRef, ChangeEvent } from 'react';
-import Link from 'next/link';
 import { 
-  Home, Building, Users, ClipboardList, FileText,
-  Mail, CalendarDays, CreditCard, Settings, 
-  ChevronLeft, ChevronRight, CheckCircle2,
-  AlertCircle, Clock, FileUp, Send, Save, X,
-  Camera, Home as HomeIcon, Hammer, Check, AlertTriangle,
-  FileSearch, FileSignature, FileInput, FileOutput,
-  DollarSign, Banknote, Wallet, TrendingUp, TrendingDown
+  FileText, CreditCard, FileUp, Send, X, Home as HomeIcon, Check, AlertTriangle,
+  DollarSign, Banknote, Wallet, TrendingUp, TrendingDown, Clock, Eye, Pencil, Trash2,
+  Plus, Search
 } from 'lucide-react';
-import { 
-  EyeIcon, PencilIcon, TrashIcon, 
-  PlusIcon, DocumentIcon, 
-  MagnifyingGlassIcon
-} from '@heroicons/react/24/outline';
 import * as XLSX from 'xlsx';
-import Sidebar  from '@/components/layouts/sidebar'; // Import du composant Sidebar
-
+import Sidebar from '@/components/layouts/sidebar';
 
 interface Transaction {
   id: number;
@@ -314,7 +303,7 @@ export default function FinanceDashboard() {
     e.preventDefault();
     if (isEditTransactionModalOpen && selectedTransaction) {
       const updatedTransactions = transactions.map(transaction => 
-        transaction.id === selectedTransaction.id ? { ...formData, id: selectedTransaction.id } : transaction
+        transaction.id === selectedTransaction.id ? { ...formData, id: selectedTransaction.id } as Transaction : transaction
       );
       setTransactions(updatedTransactions);
       setIsEditTransactionModalOpen(false);
@@ -439,7 +428,7 @@ export default function FinanceDashboard() {
           throw new Error('Format de fichier non supporté');
         }
 
-        const importedTransactions = importedData
+        const importedTransactions: Transaction[] = importedData
           .filter(item => item['Type'] && item['Montant'])
           .map((item, index) => ({
             id: transactions.length + index + 1,
@@ -633,7 +622,7 @@ export default function FinanceDashboard() {
                   className="w-full border rounded-md pl-10 pr-4 py-2 dark:bg-neutral-800 dark:border-neutral-700 dark:text-neutral-200"
                 />
                 <div className="absolute left-3 top-2.5 text-gray-400 dark:text-neutral-500">
-                  <MagnifyingGlassIcon className="h-5 w-5" />
+                  <Search className="h-5 w-5" />
                 </div>
               </div>
               
@@ -708,7 +697,7 @@ export default function FinanceDashboard() {
                 onClick={() => setIsAddTransactionModalOpen(true)}
                 className="flex items-center justify-center bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600 transition-colors"
               >
-                <PlusIcon className="h-5 w-5 mr-2" />
+                <Plus className="h-5 w-5 mr-2" />
                 Nouvelle transaction
               </button>
             </div>
@@ -783,21 +772,21 @@ export default function FinanceDashboard() {
                         className="text-blue-500 hover:text-blue-700 dark:text-blue-400 dark:hover:text-blue-300"
                         title="Voir détails"
                       >
-                        <EyeIcon className="h-5 w-5" />
+                        <Eye className="h-5 w-5" />
                       </button>
                       <button 
                         onClick={() => handleEditTransaction(transaction)}
                         className="text-green-500 hover:text-green-700 dark:text-green-400 dark:hover:text-green-300"
                         title="Modifier"
                       >
-                        <PencilIcon className="h-5 w-5" />
+                        <Pencil className="h-5 w-5" />
                       </button>
                       <button 
                         onClick={() => handleDeleteTransaction(transaction.id)}
                         className="text-red-500 hover:text-red-700 dark:text-red-400 dark:hover:text-red-300"
                         title="Supprimer"
                       >
-                        <TrashIcon className="h-5 w-5" />
+                        <Trash2 className="h-5 w-5" />
                       </button>
                     </td>
                   </tr>
@@ -997,7 +986,7 @@ export default function FinanceDashboard() {
                     type="submit"
                     className="px-4 py-2 bg-blue-500 text-white rounded-md hover:bg-blue-600 flex items-center"
                   >
-                    <DocumentIcon className="h-5 w-5 mr-2" />
+                    <FileText className="h-5 w-5 mr-2" />
                     {isEditTransactionModalOpen ? 'Mettre à jour' : 'Enregistrer'}
                   </button>
                 </div>
@@ -1128,7 +1117,7 @@ export default function FinanceDashboard() {
                   }}
                   className="px-4 py-2 bg-green-500 text-white rounded-md hover:bg-green-600 flex items-center"
                 >
-                  <PencilIcon className="h-5 w-5 mr-2" />
+                  <Pencil className="h-5 w-5 mr-2" />
                   Modifier
                 </button>
                 <button 

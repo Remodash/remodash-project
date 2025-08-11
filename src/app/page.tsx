@@ -182,7 +182,7 @@ export default function HomePage() {
           <div className="text-center mb-16 animate-fadeIn">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">Fini les complications de la gestion locative</h2>
             <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-              Le processus de départ d'un locataire est souvent source de stress et de perte de temps. RemoDAsh simplifie chaque étape.
+              Le processus de départ d&apos;un locataire est souvent source de stress et de perte de temps. RemoDAsh simplifie chaque étape.
             </p>
           </div>
           
@@ -244,7 +244,7 @@ export default function HomePage() {
           <div className="text-center mb-16 animate-fadeIn">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">Une solution complète pour tous vos besoins</h2>
             <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-              Découvrez les fonctionnalités clés qui font de RemoDAsh l'outil indispensable des gestionnaires immobiliers.
+              Découvrez les fonctionnalités clés qui font de RemoDAsh l&apos;outil indispensable des gestionnaires immobiliers.
             </p>
           </div>
           
@@ -302,7 +302,7 @@ export default function HomePage() {
           <div className="text-center mb-16 animate-fadeIn">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">Processus optimisé de gestion des départs</h2>
             <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-              Découvrez comment RemoDAsh rationalise chaque étape du processus de départ d'un locataire.
+              Découvrez comment RemoDAsh rationalise chaque étape du processus de départ d&apos;un locataire.
             </p>
           </div>
           
@@ -337,7 +337,7 @@ export default function HomePage() {
                 </div>
                 <h3 className="text-xl font-bold mb-2">Vérification des impayés</h3>
                 <p className="text-gray-600">
-                  Notifie automatiquement les services concernés en cas d'impayés et alerte le gestionnaire technique.
+                  Notifie automatiquement les services concernés en cas d&apos;impayés et alerte le gestionnaire technique.
                 </p>
               </div>
               
@@ -347,7 +347,7 @@ export default function HomePage() {
                 </div>
                 <h3 className="text-xl font-bold mb-2">Pré-État des Lieux</h3>
                 <p className="text-gray-600">
-                  Le gardien effectue l'inventaire via l'application mobile avec photos et relevés de compteurs.
+                  Le gardien effectue l&apos;inventaire via l&apos;application mobile avec photos et relevés de compteurs.
                 </p>
               </div>
               
@@ -430,7 +430,7 @@ export default function HomePage() {
                 </div>
               </div>
               <p className="text-gray-700 italic">
-                "RemoDAsh a révolutionné notre gestion des départs. L'automatisation des diagnostics et des bons de travaux nous fait gagner un temps précieux tout en réduisant les erreurs."
+                RemoDAsh a révolutionné notre gestion des départs. L&apos;automatisation des diagnostics et des bons de travaux nous fait gagner un temps précieux tout en réduisant les erreurs.
               </p>
               <div className="flex mt-4 text-yellow-400">
                 {[...Array(5)].map((_, i) => (
@@ -456,7 +456,7 @@ export default function HomePage() {
                 </div>
               </div>
               <p className="text-gray-700 italic">
-                "La fonctionnalité IA pour les diagnostics est remarquable. Elle prend en compte tous les paramètres réglementaires et nous propose une liste pertinente de diagnostics à réaliser."
+                La fonctionnalité IA pour les diagnostics est remarquable. Elle prend en compte tous les paramètres réglementaires et nous propose une liste pertinente de diagnostics à réaliser.
               </p>
               <div className="flex mt-4 text-yellow-400">
                 {[...Array(5)].map((_, i) => (
@@ -478,11 +478,11 @@ export default function HomePage() {
                 </div>
                 <div>
                   <h4 className="font-bold">Sophie T.</h4>
-                  <p className="text-sm text-gray-500">Directrice d'agence</p>
+                  <p className="text-sm text-gray-500">Directrice d&apos;agence</p>
                 </div>
               </div>
               <p className="text-gray-700 italic">
-                "La transparence sur le calcul des quotes-parts travaux est appréciée par tous. Les locataires acceptent plus facilement les déductions quand elles sont justifiées par le système."
+                La transparence sur le calcul des quotes-parts travaux est appréciée par tous. Les locataires acceptent plus facilement les déductions quand elles sont justifiées par le système.
               </p>
               <div className="flex mt-4 text-yellow-400">
                 {[...Array(5)].map((_, i) => (
@@ -590,7 +590,7 @@ export default function HomePage() {
             <div>
               <h4 className="text-lg font-bold mb-4">Ressources</h4>
               <ul className="space-y-2">
-                <li><a href="#" className="text-gray-400 hover:text-white transition">Centre d'aide</a></li>
+                <li><a href="#" className="text-gray-400 hover:text-white transition">Centre d&apos;aide</a></li>
                 <li><a href="#" className="text-gray-400 hover:text-white transition">Blog</a></li>
                 <li><a href="#" className="text-gray-400 hover:text-white transition">Webinaires</a></li>
                 <li><a href="#" className="text-gray-400 hover:text-white transition">Documentation</a></li>

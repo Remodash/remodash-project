@@ -15,27 +15,17 @@ import {
   ChevronRight,
   User,
   UserPlus,
-  Mail,
-  Phone,
   Shield,
   HardHat,
   ClipboardList,
   Calendar,
   Key,
-  MapPin,
   Edit,
   Trash2,
-  Plus,
   Search,
-  Filter,
-  ChevronDown,
-  ChevronUp,
   Save,
   X,
-  Check,
-  AlertCircle,
-  Clock,
-  CheckCircle2
+  AlertCircle
 } from 'lucide-react';
 
 // Types basés sur le cahier des charges
@@ -195,11 +185,11 @@ const StaffMemberModal: React.FC<{
 
   const getRoleLabel = (role: string) => {
     switch(role) {
-      case 'ra': return 'Responsable d\'Agence';
+      case 'ra': return 'Responsable d&apos;Agence';
       case 'gt': return 'Gestionnaire Technique';
       case 'gl': return 'Gestionnaire Locative';
       case 'gardien': return 'Gardien(ne)';
-      case 'cedl': return 'Chargé(e) d\'EDL';
+      case 'cedl': return 'Chargé(e) d&apos;EDL';
       case 'comptabilité': return 'Service Comptabilité';
       case 'contentieux': return 'Service Contentieux';
       case 'attribution': return 'Service Attribution';
@@ -268,11 +258,11 @@ const StaffMemberModal: React.FC<{
                   className="w-full p-2 border rounded-lg"
                   required
                 >
-                  <option value="ra">Responsable d'Agence</option>
+                  <option value="ra">Responsable d&apos;Agence</option>
                   <option value="gt">Gestionnaire Technique</option>
                   <option value="gl">Gestionnaire Locative</option>
                   <option value="gardien">Gardien(ne)</option>
-                  <option value="cedl">Chargé(e) d'EDL</option>
+                  <option value="cedl">Chargé(e) d&apos;EDL</option>
                   <option value="comptabilité">Service Comptabilité</option>
                   <option value="contentieux">Service Contentieux</option>
                   <option value="attribution">Service Attribution</option>
@@ -281,7 +271,7 @@ const StaffMemberModal: React.FC<{
 
               <div>
                 <label className="block text-sm font-medium mb-1" htmlFor="hireDate">
-                  Date d'embauche
+                  Date d&apos;embauche
                 </label>
                 <input
                   type="date"
@@ -464,7 +454,7 @@ const AgencySettingsModal: React.FC<{
           <div className="flex justify-between items-start mb-4">
             <h2 className="text-2xl font-bold flex items-center">
               <Settings className="h-8 w-8 mr-2" />
-              Paramètres de l'agence
+              Paramètres de l&apos;agence
             </h2>
             <button 
               onClick={onClose}
@@ -478,7 +468,7 @@ const AgencySettingsModal: React.FC<{
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
               <div>
                 <label className="block text-sm font-medium mb-1" htmlFor="name">
-                  Nom de l'agence
+                  Nom de l&apos;agence
                 </label>
                 <input
                   type="text"
@@ -538,7 +528,7 @@ const AgencySettingsModal: React.FC<{
 
               <div>
                 <label className="block text-sm font-medium mb-1" htmlFor="workingHours">
-                  Heures d'ouverture
+                  Heures d&apos;ouverture
                 </label>
                 <input
                   type="text"
@@ -553,7 +543,7 @@ const AgencySettingsModal: React.FC<{
 
               <div>
                 <label className="block text-sm font-medium mb-1" htmlFor="interventionHours">
-                  Heures d'intervention
+                  Heures d&apos;intervention
                 </label>
                 <input
                   type="text"
@@ -838,11 +828,11 @@ export default function SettingsPage() {
 
   const getRoleLabel = (role: string) => {
     switch(role) {
-      case 'ra': return 'Responsable d\'Agence';
+      case 'ra': return 'Responsable d&apos;Agence';
       case 'gt': return 'Gestionnaire Technique';
       case 'gl': return 'Gestionnaire Locative';
       case 'gardien': return 'Gardien(ne)';
-      case 'cedl': return 'Chargé(e) d\'EDL';
+      case 'cedl': return 'Chargé(e) d&apos;EDL';
       case 'comptabilité': return 'Service Comptabilité';
       case 'contentieux': return 'Service Contentieux';
       case 'attribution': return 'Service Attribution';
@@ -885,7 +875,7 @@ export default function SettingsPage() {
         <div className="flex justify-between items-center mb-6">
           <h1 className="text-1xl font-bold text-gray-800 dark:text-neutral-200 flex items-center">
             <Settings className="h-8 w-8 mr-3" />
-            Paramètres de l'Agence
+            Paramètres de l&apos;Agence
           </h1>
         </div>
 
@@ -992,11 +982,11 @@ export default function SettingsPage() {
               className="w-full p-2 border rounded-lg dark:bg-neutral-800 dark:border-neutral-700"
             >
               <option value="all">Toutes</option>
-              <option value="ra">Responsable d'Agence</option>
+              <option value="ra">Responsable d&apos;Agence</option>
               <option value="gt">Gestionnaire Technique</option>
               <option value="gl">Gestionnaire Locative</option>
               <option value="gardien">Gardien(ne)</option>
-              <option value="cedl">Chargé(e) d'EDL</option>
+              <option value="cedl">Chargé(e) d&apos;EDL</option>
               <option value="comptabilité">Comptabilité</option>
               <option value="contentieux">Contentieux</option>
               <option value="attribution">Attribution</option>

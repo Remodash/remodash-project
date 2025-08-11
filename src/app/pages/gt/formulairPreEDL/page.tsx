@@ -1,8 +1,9 @@
 'use client';
 
 import React, { useState, JSX } from 'react';
+import Image from 'next/image';
 import { 
-  ClipboardList, Home, User, FileText, Camera, 
+  ClipboardList, Home, User, FileText,
   Check, AlertTriangle, ChevronDown, ChevronUp,
   Zap, Droplet, Flame, Paintbrush, DoorOpen,
   Bath, Bed, Sofa, Refrigerator, Tv, WashingMachine,
@@ -19,12 +20,14 @@ interface Photo {
   tags?: string[];
 }
 
+/*
 interface Room {
   id: string;
   name: string;
   type: string;
   elements: Element[];
 }
+  */
 
 interface Element {
   id: string;
@@ -35,12 +38,14 @@ interface Element {
   photos: Photo[];
 }
 
+/*
 interface MeterReading {
   type: 'electricity' | 'water' | 'gas';
   value: string;
   photo?: Photo;
   notes?: string;
 }
+*/
 
 export default function PreEDLResult() {
   const [currentPhotoView, setCurrentPhotoView] = useState<Photo | null>(null);
@@ -205,7 +210,7 @@ export default function PreEDLResult() {
         type: 'water', 
         value: '12345', 
         photo: undefined, 
-        notes: 'Compteur difficile d\'accès' 
+        notes: 'Compteur difficile d&apos;accès' 
       },
       { 
         type: 'gas', 
@@ -460,14 +465,14 @@ export default function PreEDLResult() {
                         </div>
 
                         {element.notes && (
-                          <p className="mt-2 text-sm text-gray-600 italic">"{element.notes}"</p>
+                          <p className="mt-2 text-sm text-gray-600 italic">{element.notes}</p>
                         )}
 
                         {element.photos.length > 0 && (
                           <div className="flex flex-wrap gap-2 mt-2">
                             {element.photos.map((photo) => (
                               <div key={photo.id} className="relative">
-                                <img
+                                <Image
                                   src={photo.url}
                                   alt={photo.name}
                                   className="w-16 h-16 object-cover rounded border cursor-pointer"
@@ -623,7 +628,7 @@ export default function PreEDLResult() {
               </div>
               
               <div className="bg-black rounded-lg overflow-hidden">
-                <img
+                <Image
                   src={currentPhotoView.url}
                   alt={currentPhotoView.name}
                   className="w-full max-h-[70vh] object-contain"

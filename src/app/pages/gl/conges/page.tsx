@@ -6,19 +6,14 @@ import {
   Home,
   FileText,
   ClipboardCheck,
-  Hammer,
   Building,
   Users,
-  CreditCard,
   Settings,
   ChevronLeft,
   ChevronRight,
-  AlertCircle,
   CheckCircle2,
   XCircle,
   Calendar,
-  Clock,
-  FileSearch,
   AlertTriangle,
   Info,
   FileSignature,
@@ -30,22 +25,17 @@ import {
   Search,
   CircleDashed,
   Check,
-  X,
   ChevronUp,
   ChevronDown,
   Phone,
-  MapPin,
   Ruler,
   Hash,
   BookOpen,
-  AlertOctagon,
   FileInput,
   FileOutput,
   CalendarDays,
   MessageSquare, 
-  Construction,
-  ArrowUpDown,
-  MoreHorizontal, Wallet
+  ArrowUpDown, Wallet
 } from 'lucide-react';
 
 // Types basés sur le cahier des charges
@@ -743,7 +733,7 @@ export default function GLDashboard() {
   const [sortConfig, setSortConfig] = useState<{key: string; direction: 'ascending' | 'descending'} | null>(null);
 
   // Données simulées basées sur le cahier des charges
-  const [tenants, setTenants] = useState<Tenant[]>([
+  const [tenants] = useState<Tenant[]>([
     {
       id: 'T1001',
       name: 'Jean Dupont',
@@ -771,7 +761,7 @@ export default function GLDashboard() {
     }
   ]);
 
-  const [properties, setProperties] = useState<Property[]>([
+  const [properties] = useState<Property[]>([
     {
       id: 'prop-1',
       address: '12 Rue de la Paix, 75002 Paris',
@@ -936,7 +926,7 @@ export default function GLDashboard() {
   };
 
   const sortedNotices = React.useMemo(() => {
-    let sortableNotices = [...leaveNotices];
+    const sortableNotices = [...leaveNotices];
     if (sortConfig !== null) {
       sortableNotices.sort((a, b) => {
         // Gestion des différents types de tri

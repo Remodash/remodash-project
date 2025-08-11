@@ -13,25 +13,11 @@ import {
   Settings,
   ChevronLeft,
   ChevronRight,
-  AlertCircle,
-  CheckCircle2,
   XCircle,
   Calendar,
-  Clock,
   FileSearch,
   AlertTriangle,
-  Info,
-  FileSignature,
   ClipboardList,
-  Thermometer,
-  ShieldAlert,
-  Zap,
-  Droplets,
-  Bug,
-  Flame,
-  Factory,
-  ScanEye,
-  CalendarCheck,
   HardHat,
   Construction,
   Check,
@@ -172,7 +158,7 @@ const WorkOrderDetailModal: React.FC<{
   const toggleSection = (section: string) => {
     setExpandedSection(expandedSection === section ? null : section);
   };
-
+/*
   const getStatusIcon = (status: string) => {
     switch(status) {
       case 'pending': return <CircleDashed className="h-4 w-4 text-yellow-500" />;
@@ -183,6 +169,7 @@ const WorkOrderDetailModal: React.FC<{
       default: return <CircleDashed className="h-4 w-4 text-gray-500" />;
     }
   };
+  */
 
   const getStatusColor = (status: string) => {
     switch(status) {
@@ -364,7 +351,7 @@ const WorkOrderDetailModal: React.FC<{
                       <div className="flex justify-between items-center mb-2">
                         <p className="font-medium">{report.date}</p>
                         <span className="text-sm text-gray-500 dark:text-neutral-400">
-                          {report.progress}% d'avancement
+                          {report.progress}% d&apos;avancement
                         </span>
                       </div>
                       <p className="mb-2">{report.notes}</p>
